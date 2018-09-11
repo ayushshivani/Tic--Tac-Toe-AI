@@ -161,7 +161,7 @@ int minimax(int d,bool isMax)
 				}
 			}
 		}
-		return best ; 
+		return best-d ; 
 	}
 	else
 	{
@@ -178,7 +178,7 @@ int minimax(int d,bool isMax)
 				}
 			}
 		}
-		return best;
+		return best+d;
 	}
 }
 
@@ -230,10 +230,10 @@ int main()
 		{
 			printf("Player 1\n");
 			scanf("%d %d",&row,&col);
-			if (check_input(row,col))
+			if (check_input(row-1,col-1))
 			{
 				i++;
-				take_input(row,col,player1);
+				take_input(row-1,col-1,player1);
 			}
 		}
 		else
@@ -250,17 +250,14 @@ int main()
 		}
 		if (p1==1)
 		{
-			printf("Player 1 wins\n");
+			printf("You win\n");
 			return 0;
 		}
 		else if (p2==1)
 		{
 			printf("You Lose\n");
 			return 0;
-		}
-
-		
+		}	
 	}
-	
 	return 0;
 }
