@@ -28,7 +28,6 @@ void make_board(void)
 
 int check_com(int x)
 {
-	// checking horizontally
 	for (int i = 0; i < 3; ++i)
 	{
 		if (board[i][0]==board[i][1] && board[i][1]==board[i][2] && board[i][0]!='_')
@@ -36,7 +35,7 @@ int check_com(int x)
 			if (board[i][1] == player1)
 			{
 				if (x==1) p1 =1;
-				// printf("Player 1 wins\n");
+				
 				return 10;		
 			}
 			else if (board[i][1]==player2)
