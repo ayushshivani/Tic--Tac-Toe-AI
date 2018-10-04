@@ -75,7 +75,7 @@ int check_com(int x)
 		if (board[0][0] == player1)
 		{
 			if (x==1)p1 =1;
-			// printf("Player 1 wins\n");
+			
 			return 10;		
 		}
 		else if (board[0][0]==player2)
